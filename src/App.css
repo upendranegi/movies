@@ -58,3 +58,54 @@
   font-size: 27px;
   margin: 10px;
 }
+
+
+@media (max-width:1200px){
+  .mvs2{
+    width: 30%;
+  }
+}
+
+
+@media (max-width:900px){
+  .mvs2{
+    width: 45%;
+  }
+}
+
+@media (max-width:700px){
+  .mvs2{
+    width: 48%;
+  }
+}
+
+@media (max-width:600px){
+  .mvs2{
+    width: 48%;
+  }
+}
+
+
+
+
+@media (max-width:507px){
+  .mvs2{    width: 89%;
+    margin: 0 2rem;
+  }
+}
+
+
+
+@media (max-width:400px){
+  .mvs2{    width: 95%;
+    margin: 0 0rem;
+  }
+}
+
+
+
+@media (max-width:270px){
+  *{
+    display: none;
+  }
+}
