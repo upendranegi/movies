@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import Flimes from './componet/Flimes';
+import './App.css'
+export default function App() {
+  const [usedata , setusedata]= useState([])
+  
+  
+const url =`https://api.tvmaze.com/search/shows?q=all`;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  function pul(){
+fetch(url)
+.then( (response ) =>{
+  return response.json();
+}).then((data)=>{setusedata(data)
+  setpage(page)
+ } )
+
+  }
+  useEffect(()=>{
+
+pul();
+  }, [])
+
+
+  return (<>
+  <h3 className='heading'>Movies</h3>
+    <div className='mv1' >
+     
+     {usedata.map(data=>(
+       <div className='mvs2'  key={data.score}>
+        
+        <Flimes  name={data.show.name} links={data.show.officialSite} imgs={data.show.image?.medium} lang={data.show.language}   summary={data.show.summary} />
+        
+         
+      </div>        
+     ))}
+
+
     </div>
-  );
-}
 
-export default App;
+  
+    
+     </>
+  )
+}

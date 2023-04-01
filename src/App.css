@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.mv1{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+  margin: auto;
+}
+
+
+.mvs2{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px 5px;
+  flex-direction: row;
+  width: 24%;
+}
+
+.heading{
+  text-align: center;
+  font-size: 27px;
+  margin: 10px;
+}
